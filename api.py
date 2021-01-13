@@ -22,8 +22,8 @@ You will have to create a new html template in the templates folder and send the
 """
 @app.route("/all_films")
 def all_films():
-    films = [film['title'] for film in requests.get(base_url + "/films/").json()['results']]
-    return render_template("films.html", films = films)
+    all_films = requests.get("https://swapi.py4e.com/api/films").json()
+    return render_template('films.html', films = [film["title"] for film in all_films["results"]])
 
 """
 Run 'python3 api.py' in the terminal to start the Flask API server
