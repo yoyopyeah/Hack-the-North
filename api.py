@@ -22,7 +22,8 @@ You will have to create a new html template in the templates folder and send the
 """
 @app.route("/all_films")
 def all_films():
-    pass
+    films = [film['title'] for film in requests.get(base_url + "/films/").json()['results']]
+    return render_template("films.html", films = films)
 
 """
 Run 'python3 api.py' in the terminal to start the Flask API server
