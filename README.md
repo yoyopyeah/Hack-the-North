@@ -2,7 +2,7 @@
 
 ### Before beginning this workshop, please ensure that you have installed Python3 and an IDE that supports Python development, such as Visual Studio Code or PyCharm. 
 
-You can check whether you have Python3 installed by starting a terminal session and typing
+You can check whether you have  Python3 installed by starting a terminal session and typing
 ```
 python3 -v
 ```
